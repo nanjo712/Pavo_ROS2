@@ -30,5 +30,9 @@ ament_target_dependencies(pavo_scan_node rclcpp sensor_msgs)
 target_link_libraries(pavo_scan_node PAVO_SDK)
 target_include_directories(pavo_scan_node PRIVATE include)
 
+install(TARGETS
+  pavo_scan_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
